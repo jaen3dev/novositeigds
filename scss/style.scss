@@ -1,7 +1,165 @@
-*{
-
+@font-face {
+    font-family: JosefinSans;
+    src: url(../assets/fonts/JosefinSans-Regular.ttf);
+    font-weight: 400;
 }
 
-body{
-    
+@font-face {
+    font-family: "JosefinSans";
+    src: url(../assets/fonts/JosefinSans-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url(../assets/fonts/JosefinSans-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "JosefinSans";
+    src: url(../assets/fonts/JosefinSans-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin tablet {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
+@mixin break($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+nav {
+    height: 4rem;
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0050b6;
+
+    span {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    ul {
+        display: none;
+    }
+
+    img.ham-menu {
+        cursor: pointer;
+        height: 85%;
+    }
+
+    @include tablet {
+        margin: 0.2rem 2rem 0rem;
+        height: 5rem;
+        background-color: unset;
+
+        span {
+            flex: 1;
+            margin-right: 0.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #95b9e7;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        ul {
+            height: 100%;
+            background-color: #0050b6;
+            width: 90%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            li {
+                list-style: none;
+                color: white;
+                font-family: JosefinSans;
+                font-weight: bold;
+                cursor: pointer;
+                padding: 1rem .2rem;
+                font-size: .8rem;
+                text-align: center;
+
+                &:hover {
+                    background-color: white;
+                    color: #0050b6;
+                }
+            }
+        }
+
+        img.ham-menu {
+            display: none;
+        }
+    }
+
+    @include desktop {
+        ul {
+            li {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+iframe {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+    height: 30rem;
+}
+
+section {
+    &#mobile-about-us {
+        display: block;
+    }
+
+    &#desktop-about-us {
+        display: none;
+    }
+
+    @include desktop {
+        &#mobile-about-us {
+            display: none;
+        }
+
+        &#desktop-about-us {
+            display: block;
+        }
+    }
 }
