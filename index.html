@@ -13,6 +13,14 @@
     <nav>
         <span>
             <img src="assets/vectors/igdsnewlogo.svg">
+            <!-- LEMBRAR DE ACESSABILIDADE ANTES DE CONCLUIR
+            --
+            --
+            -- 
+            --
+            --
+            --
+            ------------------------------------------------->
         </span>
 
         <img src="assets/vectors/ham_menu.svg" class="ham-menu" />
@@ -94,12 +102,72 @@
             </div>
             <img src="assets/vectors/right-arrow.svg" class="next-arrow" />
         </div>
-
     </section>
 
     <section id="desktop-about-us">
-        <div></div>
-        <h1></h1>
+        <div class="gallery-container">
+            <div class="desktop-gallery">
+                <img class="first" src="assets/images/srglacia_e_paulo.jpg" />
+                <img class="second" src="assets/images/paulo_e_rose.jpg" />
+                <img class="third" src="assets/images/entrada_instituto.jpg" />
+            </div>
+            <div class="desktop-text">
+                <div class="gallery-text gt1">
+                    <h1>ORIGEM</h1>
+                    <p><i>"Continue ajudando as pessoas e cuide bem de nossa família..."</i>
+                        <br><br>
+                        Foi o último pedido da
+                        Sr. Glacia da Silva, ao seu filho
+                        Paulo da Silva.
+                        <br><br>
+                        Dona Glacia sempre teve
+                        em si um espírito filantrópico,
+                        que a levava a estender
+                        a mão ao próximo.
+
+                        Fazia o bem, sem olhar
+                        a quem.
+                        <br><br>
+                        Essa é a origem primordial
+                        da instituição que carrega
+                        seu nome.
+                    </p>
+                </div>
+                <div class="gallery-text gt2">
+                    <h1>MENTOR</h1>
+                    <p>Ao visitar um parente, o mentor do instituto, o Sr. Paulo, avistou uma cadeira de rodas quebrada
+                        e inutilizada.
+                        <br><br>
+                        Ali surgiu uma ideia, efetuou a compra da cadeira e realizou o seu reparo e logo após, começou a
+                        emprestar para pessoas que precisavam. <br><br>
+                        Eventualmente foi atrás de mais e mais aparatos, em usinas de reciclagem, de amigos e
+                        conhecidos, etc.
+                        <br><br>
+                        A quantidade de aparelhos cresceu ao ponto de faltar espaço em casa!
+                        <br>
+                        Com o apoio de amigos e família a instituição foi criada, um barracão foi
+                        alugado, e o projeto oficializado!
+                    </p>
+                </div>
+                <div class="gallery-text gt3">
+                    <h1>FUTURO</h1>
+                    <p>Além de fornecer os produtos hospitalares para quem precisa, o instituto doa cestas básicas e
+                        roupas para pessoas que realizam trabalhos de caridade e cuidam dos próximos.
+                        <br><br>
+                        Uma das maneiras do instituto se manter é realizando bazar de roupas e aparelhos domésticos
+                        doados.
+
+                        <br><br>
+                        <strong>O instituto não vende produtos hospitalares, realizamos o empréstimo GRATUITO!</strong>
+                        <br><br>
+
+                        O objetivo, é ajudar quanto mais pessoas possíveis. Engajar nessa corrente humana & fazer o
+                        bem, sem olhar a quem!
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <section id="activities">
@@ -167,25 +235,30 @@
                     <p>Rua Santo Antônio, 580 - São Roque Campo Magro PR</p>
                 </div>
             </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!4v1709495296114!6m8!1m7!1sscTxe9adssWEaMfHppnU0w!2m2!1d-25.36361897685955!2d-49.41687515527242!3f61.121465479678776!4f-10.40077466877743!5f0.7820865974627469"
-                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-iframe">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!4v1709495296114!6m8!1m7!1sscTxe9adssWEaMfHppnU0w!2m2!1d-25.36361897685955!2d-49.41687515527242!3f61.121465479678776!4f-10.40077466877743!5f0.7820865974627469"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div class="socials-icons">
-                <a href="https://www.google.com/" target="_blank"><img src="assets/vectors/facebook.svg"/></a>
-                <a href="https://www.google.com/" target="_blank"><img src="assets/vectors/instagram.svg"/></a>
+                <a href="https://www.google.com/" target="_blank"><img src="assets/vectors/facebook.svg" /></a>
+                <a href="https://www.google.com/" target="_blank"><img src="assets/vectors/instagram.svg" /></a>
             </div>
         </div>
         <div class="contact-form">
             <form>
-                <label for="nome">Nome</label>
-                <input id="nome" name="nome" type="text" />
+                <label for="nome">Nome
+                    <input id="nome" name="nome" type="text" />
+                </label>
 
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" />
+                <label for="email">E-mail
+                    <input id="email" name="email" type="email" />
+                </label>
 
-                <label for="message">Mensagem</label>
-                <textarea id="message" name="message" type="text"></textarea>
+                <label for="message">Mensagem
+                    <textarea id="message" name="message" type="text"></textarea>
+                </label>
 
                 <button>ENVIAR</button>
             </form>
