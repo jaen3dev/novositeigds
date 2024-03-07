@@ -259,24 +259,22 @@ section {
         background: linear-gradient(90deg, hsla(206, 91%, 66%, 1) 0%, hsla(190, 90%, 51%, 1) 100%);
         display: none;
         width: 100vw;
-        border: 5px solid coral;
+        overflow: hidden;
+        min-height: 52.4rem;
 
         .gallery-container {
             display: flex;
-            gap: 1rem;
-            justify-content: space-between;
-            height: 100%;
+            gap: 5rem;
+            justify-content: center;
             width: 100%;
-            position: relative;
 
             .desktop-gallery {
-                border: 1px solid;
-                width: 40%;
+                width: min-content;
                 margin-left: 4rem;
                 position: relative;
 
                 img {
-                    width: 80%;
+                    width: 18rem;
                     height: 12rem;
                     object-fit: cover;
                     position: relative;
@@ -284,44 +282,40 @@ section {
                     transition: 0.3s ease-in-out;
 
                     &:hover {
-                        transform: scale(1.3);
-                        z-index: 3;
                         transition: 0.3s ease-in-out;
                     }
 
-                    &:not(:hover) {
-                        filter: blur(0.1rem);
-                    }
+                    // &:not(:hover) {
+                    //     filter: blur(0.1rem);
+                    // }
                 }
 
-                .first {
-                    border: 5px solid white;
+                .dg1 {
+                    border: 4px solid white;
                     top: 1rem;
                     z-index: 2;
-                    filter: blur(1);
-
-                    &:hover + .gt1 {
-                        opacity: 0;
-                    }
+                    filter: blur(0rem);
                 }
-                .second {
+                .dg2 {
                     border: 4px solid white;
                     left: 3rem;
                     z-index: 1;
+                    filter: blur(.2rem);
                 }
-                .third {
-                    border: 5px solid white;
+                .dg3 {
+                    border: 4px solid white;
                     left: 1rem;
                     bottom: 1rem;
+                    z-index: 0;
+                    filter: blur(.2rem);
                 }
             }
 
             .desktop-text {
-                border: 1px solid;
+                max-width: 40rem;
                 color: #ffffff;
                 display: flex;
                 flex: 1;
-                width: 50%;
                 position: relative;
                 left: 0;
                 top: 0;
@@ -329,12 +323,11 @@ section {
                 .gallery-text {
                     background: #004fb6e1;
                     padding: 1rem 2rem;
-                    min-width: 100%;
-                    height: 100%;
                     border-radius: 16px;
                     position: absolute;
                     left: 0;
                     top: 0;
+                    transition: 0.5s ease-in-out;
 
                     h1{
                         font-size: 2rem;

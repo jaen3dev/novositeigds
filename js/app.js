@@ -1,3 +1,5 @@
+//VARs & Functions Gallery Mobile
+
 const prevBtn = document.querySelector('.prev-arrow')
 const nextBtn = document.querySelector('.next-arrow')
 const galleryImgGroup = document.querySelector('.gallery')
@@ -14,12 +16,11 @@ const blurNotSelectedImages = (index) => {
         }
     }
 }
-
 prevBtn.addEventListener('click', () => {
     if (galleryIndex === 0) {
         galleryImgGroup.style.transform = 'translateX(-200%)'
     } else {
-        const value = galleryIndex == 0? 0 : galleryIndex == 1? -100 : -200 
+        const value = galleryIndex == 0 ? 0 : galleryIndex == 1 ? -100 : -200
         galleryImgGroup.style.transform = (`translateX(${value + 100}%)`)
     }
 
@@ -27,12 +28,11 @@ prevBtn.addEventListener('click', () => {
     blurNotSelectedImages(galleryIndex)
 
 })
-
 nextBtn.addEventListener('click', () => {
     if (galleryIndex === 2) {
         galleryImgGroup.style.transform = 'translateX(0%)'
     } else {
-        const value = galleryIndex == 0? 0 : galleryIndex == 1? -100 : -200 
+        const value = galleryIndex == 0 ? 0 : galleryIndex == 1 ? -100 : -200
         galleryImgGroup.style.transform = (`translateX(${value - 100}%)`)
     }
 
@@ -40,3 +40,31 @@ nextBtn.addEventListener('click', () => {
     galleryIndex = galleryIndex == 2 ? 0 : galleryIndex + 1
     blurNotSelectedImages(galleryIndex)
 })
+
+
+//VARs & Functions Gallery Desktop
+
+const galleryImages = document.querySelectorAll('.gallery-image')
+
+for (let image of galleryImages) {
+    image.addEventListener('mouseover', (event) => {
+        for (let image of galleryImages) {
+            if (event.target.className === image.className) {
+                document.querySelector(`.gt${image.className.slice(-1)}`).style.opacity = '1'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.zIndex = 5
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.filter = 'blur(0)'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.transform = 'scale(1.3)'
+
+            } else {
+                document.querySelector(`.gt${image.className.slice(-1)}`).style.opacity = '0'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.zIndex = 0
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.filter = 'blur(0.3rem)'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.transform = 'scale(1)'
+                
+
+            }
+        }
+
+
+    })
+}
