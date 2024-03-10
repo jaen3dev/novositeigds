@@ -5,14 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instituto Glacia da Silva - Corrente do Bem</title>
+    <meta name="description"
+        content="O Instituto Glacia da Silva é uma ONG situada na cidade Campo Magro (região metropolitana de Curitiba), que faz a captação e doação de aparelhos hospitalares, além de realizar bazares e eventos.">
+
     <link rel="stylesheet" href="/dist/style.css">
     <script src="/js/app.js" async></script>
 </head>
 
 <body>
-    <nav>
-        <span>
-            <img src="assets/vectors/igdsnewlogo.svg">
+
+    <nav id="sidebar">
+        <div class="sidebar-content">
+            <img class="close-icon" src="assets/vectors/close.svg  " aria-label="Fechar menu." />
+            <ul>
+                <li class="sidebar-a"><a href="#desktop-about-us">QUEM SOMOS</a></li>
+                <li class="sidebar-a"><a href="#activities">O QUE FAZEMOS</a></li>
+                <li class="sidebar-a"><a href="#helping">COMO AJUDAR</a></li>
+                <li class="sidebar-a"><a href="#contact">CONTATO</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="main-bar">
+        <a class="logo-a" href="#">
+            <img src="assets/vectors/igdsnewlogo.svg"
+                alt="Logo do Instituto Glacia da Silva, uma letra G e S que juntas formam a aparência de um coração." />
+
             <!-- LEMBRAR DE ACESSABILIDADE ANTES DE CONCLUIR
             --
             --
@@ -21,15 +39,15 @@
             --
             --
             ------------------------------------------------->
-        </span>
+        </a>
 
-        <img src="assets/vectors/ham_menu.svg" class="ham-menu" />
+        <img src="assets/vectors/ham_menu.svg" class="ham-menu" aria-label="Abrir menu." />
 
         <ul>
-            <li>QUEM SOMOS</li>
-            <li>O QUE FAZEMOS</li>
-            <li>COMO AJUDAR</li>
-            <li>CONTATO</li>
+            <li><a href="#desktop-about-us">QUEM SOMOS</a></li>
+            <li><a href="#activities">O QUE FAZEMOS</a></li>
+            <li><a href="#helping">COMO AJUDAR</a></li>
+            <li><a href="#contact">CONTATO</a></li>
         </ul>
     </nav>
 
@@ -39,13 +57,15 @@
         allowfullscreen seamless>
     </iframe>
 
-    <section id="mobile-about-us">
+    <section id="mobile-about-us" aria-label="Sobre nós.">
         <div class="gallery-container">
-            <img src="assets/vectors/left-arrow.svg" class="prev-arrow" />
+            <img src="assets/vectors/left-arrow.svg" class="prev-arrow"
+                alt="Ícone de uma flecha que representa ir para a imagem anterior." />
             <div class="gallery">
                 <div class="gallery-card">
                     <h1>ORIGEM</h1>
-                    <img src="assets/images/srglacia_e_paulo.jpg" />
+                    <img src="assets/images/srglacia_e_paulo.jpg"
+                        alt="Imagem antiga do fundador do instituto, o Sr. Paulo ao lado de sua mãe, a Dona Glácia." />
                     <p><i>"Continue ajudando as pessoas e cuide bem de nossa família..."</i>
                         <br><br>
                         Foi o último pedido da
@@ -67,7 +87,8 @@
                 </div>
                 <div class="gallery-card">
                     <h1>MENTOR</h1>
-                    <img src="assets/images/paulo_e_rose.jpg" />
+                    <img src="assets/images/paulo_e_rose.jpg"
+                        alt="Imagem do fundador do instituto, o Sr. Paulo ao lado de sua esposa, a Dona Rose, ambos seguram um certificado que receberam do estado do Paraná." />
                     <p>Ao visitar um parente, o mentor do instituto, o Sr. Paulo, avistou uma cadeira de rodas quebrada
                         e inutilizada.
                         <br><br>
@@ -84,7 +105,8 @@
                 </div>
                 <div class="gallery-card">
                     <h1>FUTURO</h1>
-                    <img src="assets/images/entrada_instituto.jpg" />
+                    <img src="assets/images/entrada_instituto.jpg"
+                        alt="Imagem da entrada do barracão onde é realizado o bazar do instituto." />
                     <p>Além de fornecer os produtos hospitalares para quem precisa, o instituto doa cestas básicas e
                         roupas para pessoas que realizam trabalhos de caridade e cuidam dos próximos.
                         <br><br>
@@ -100,16 +122,20 @@
                     </p>
                 </div>
             </div>
-            <img src="assets/vectors/right-arrow.svg" class="next-arrow" />
+            <img src="assets/vectors/right-arrow.svg" class="next-arrow"
+                alt="Ícone de uma flecha que representa ir para a próxima imagem." />
         </div>
     </section>
 
-    <section id="desktop-about-us">
+    <section id="desktop-about-us" aria-label="Sobre nós.">
         <div class="gallery-container">
             <div class="desktop-gallery">
-                <img class="gallery-image dg1" src="assets/images/srglacia_e_paulo.jpg" />
-                <img class="gallery-image dg2" src="assets/images/paulo_e_rose.jpg" />
-                <img class="gallery-image dg3" src="assets/images/entrada_instituto.jpg" />
+                <img class="gallery-image dg1" src="assets/images/srglacia_e_paulo.jpg"
+                    alt="Imagem antiga do fundador do instituto, o Sr. Paulo ao lado de sua mãe, a Dona Glácia." />
+                <img class="gallery-image dg2" src="assets/images/paulo_e_rose.jpg"
+                    alt="Imagem do fundador do instituto, o Sr. Paulo ao lado de sua esposa, a Dona Rose, ambos seguram um certificado que receberam do estado do Paraná." />
+                <img class="gallery-image dg3" src="assets/images/entrada_instituto.jpg"
+                    alt="Imagem da entrada do barracão onde é realizado o bazar do instituto." />
             </div>
             <div class="desktop-text">
                 <div class="gallery-text gt1">
@@ -170,7 +196,7 @@
 
     </section>
 
-    <section id="activities">
+    <section id="activities" aria-label="Atividades.">
         <div class="activities-first">
             <p>O objetivo principal da instituição
                 é a captação e empréstimo de
@@ -185,7 +211,8 @@
                 de aparelhos doados
                 que estejam quebrados.
             </p>
-            <img src="assets/images/equipamentos.jpg" />
+            <img src="assets/images/equipamentos.jpg"
+                alt="Fotografia de uma caçamba com vários aparelhos hospitalares em cima." />
         </div>
 
         <div class="activities-second">
@@ -200,12 +227,12 @@
                 eletrodomésticos e efetuamos
                 a venda.
             </p>
-            <img src="assets/images/roupas.jpg" />
+            <img src="assets/images/roupas.jpg" alt="Fotografia de várias roupas enfileiradas em cabides." />
         </div>
     </section>
 
-    <section id="helping">
-        <h1>Você pode nos ajudar a espalhar o bem!</h1>
+    <section id="helping" aria-label="Ajudando.">
+        <h1>VOCÊ PODE NOS AJUDAR!</h1>
         <div>
             <p>Caso possua alguma doação, seja de roupas, móveis,
                 eletrodomésticos e algum aparelhato hospitalar,
@@ -214,56 +241,61 @@
                 Também aceitamos doações monetárias, um dos
                 nossos meios é o rápido PIX!
             </p>
-            <img src="/assets/images/qrcode.jpeg" />
+            <img src="/assets/images/qrcode.jpeg" alt="Imagem do QR Code do PIX do Instituto Glacia da Silva." />
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" aria-label="Contato.">
         <div class="contact-socials">
             <h1>Entre em contato conosco!</h1>
             <div class="info-group">
                 <div class="svg-and-contact">
-                    <img src="assets/vectors/phone.svg" />
-                    <p>(41) 98455-2333 / (41) 98523-4110</p>
+                    <img src="assets/vectors/phone.svg" alt="Desenho uma representação de um telefone." />
+                    <p><span>(41) 98455-2333 /&nbsp</span><span>(41) 98523-4110</span></p>
                 </div>
                 <div class="svg-and-contact">
-                    <img src="assets/vectors/mail.svg" />
-                    <p>institutoglaciadasilvacdb@gmail.com</p>
+                    <img src="assets/vectors/mail.svg"
+                        alt="Desenho uma representação de uma carta, que simboliza um email." />
+                    <p>institutoglaciadasilvacdb<span>@gmail.com</span></p>
                 </div>
                 <div class="svg-and-contact">
-                    <img src="assets/vectors/pin.svg" />
-                    <p>Rua Santo Antônio, 580 - São Roque Campo Magro PR</p>
+                    <img src="assets/vectors/pin.svg" alt="Desenho um alfinete, que simboliza a noção de local." />
+                    <p>Rua Santo Antônio, 580 - São Roque, Campo Magro PR</p>
                 </div>
             </div>
             <div class="map-iframe">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!4v1709495296114!6m8!1m7!1sscTxe9adssWEaMfHppnU0w!2m2!1d-25.36361897685955!2d-49.41687515527242!3f61.121465479678776!4f-10.40077466877743!5f0.7820865974627469"
                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    referrerpolicy="no-referrer-when-downgrade"
+                    aria-label="Uma tela que mostra um mapa interativo da localização do Instituto Glacia da Silva."></iframe>
             </div>
             <div class="socials-icons">
-                <a href="https://www.google.com/" target="_blank"><img src="assets/vectors/facebook.svg" /></a>
-                <a href="https://www.google.com/" target="_blank"><img src="assets/vectors/instagram.svg" /></a>
+                <a href="https://www.facebook.com/institutoglaciadasilva" target="_blank"><img
+                        src="assets/vectors/facebook.svg" alt="Logo da rede social facebook." /></a>
+                <a href="https://www.instagram.com/institutoglaciadasilva/" target="_blank"><img
+                        src="assets/vectors/instagram.svg" alt="Logo da rede social instagram." /></a>
             </div>
         </div>
         <div class="contact-form">
-            <form>
+            <form action='https://formspree.io/f/xwkwdlqd' method='POST'>
                 <label for="nome">Nome
-                    <input id="nome" name="nome" type="text" />
+                    <input id="nome" name="nome" type="text" required />
                 </label>
 
                 <label for="email">E-mail
-                    <input id="email" name="email" type="email" />
+                    <input id="email" name="email" type="email" required />
                 </label>
 
                 <label for="message">Mensagem
-                    <textarea id="message" name="message" type="text"></textarea>
+                    <textarea id="message" name="message" type="text" required></textarea>
                 </label>
 
-                <button>ENVIAR</button>
+                <button aria-label="Enviar formulário.">ENVIAR</button>
             </form>
         </div>
     </section>
+
     <footer>Website cedido por <a href="https://github.com/jaen3dev" target="_blank">jaen3dev</a></footer>
 </body>
 

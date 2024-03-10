@@ -58,13 +58,55 @@ for (let image of galleryImages) {
             } else {
                 document.querySelector(`.gt${image.className.slice(-1)}`).style.opacity = '0'
                 document.querySelector(`.dg${image.className.slice(-1)}`).style.zIndex = 0
-                document.querySelector(`.dg${image.className.slice(-1)}`).style.filter = 'blur(0.3rem)'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.filter = 'blur(0.1rem)'
                 document.querySelector(`.dg${image.className.slice(-1)}`).style.transform = 'scale(1)'
-                
-
             }
         }
 
 
+    })
+
+    image.addEventListener('click', (event) => {
+        for (let image of galleryImages) {
+            if (event.target.className === image.className) {
+                document.querySelector(`.gt${image.className.slice(-1)}`).style.opacity = '1'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.zIndex = 5
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.filter = 'blur(0)'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.transform = 'scale(1.3)'
+
+            } else {
+                document.querySelector(`.gt${image.className.slice(-1)}`).style.opacity = '0'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.zIndex = 0
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.filter = 'blur(0.1rem)'
+                document.querySelector(`.dg${image.className.slice(-1)}`).style.transform = 'scale(1)'
+            }
+        }
+    })
+}
+
+
+//VARS & Functions for SideBar
+
+const hamIcon = document.querySelector('.ham-menu')
+const closeIcon = document.querySelector('.close-icon')
+const sidebar = document.getElementById('sidebar')
+const sidebarAnchors = document.querySelectorAll('.sidebar-a')
+
+hamIcon.addEventListener('click', () => {
+    sidebar.style.display = 'flex'
+    document.querySelector('body').style.overflow = 'hidden'
+})
+
+closeIcon.addEventListener('click', () => {
+    sidebar.style.display = 'none'
+    document.querySelector('body').style.overflow = 'scroll'
+})
+
+
+for (let anchor of sidebarAnchors) {
+    anchor.addEventListener('click', () => {
+        console.log('sidebar close')
+        sidebar.style.display = 'none'
+        document.querySelector('body').style.overflow = 'scroll'
     })
 }
