@@ -94,18 +94,17 @@ const sidebarAnchors = document.querySelectorAll('.sidebar-a')
 
 hamIcon.addEventListener('click', () => {
     sidebar.style.display = 'flex'
-    document.querySelector('body').style.overflow = 'hidden'
+    document.querySelector('html').style.overflowY = 'hidden'
 })
 
 closeIcon.addEventListener('click', () => {
     sidebar.style.display = 'none'
-    document.querySelector('body').style.overflow = 'scroll'
+    document.querySelector('html').style.overflowY = 'scroll'
 })
 
 
 for (let anchor of sidebarAnchors) {
     anchor.addEventListener('click', () => {
-        console.log('sidebar close')
         sidebar.style.display = 'none'
         document.querySelector('body').style.overflow = 'scroll'
     })
