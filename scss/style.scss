@@ -204,6 +204,23 @@ nav#main-bar {
     }
 }
 
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
 nav#sidebar {
     z-index: 10;
     display: none;
@@ -420,6 +437,16 @@ section {
                 width: min-content;
                 position: relative;
 
+                .tip-hover {
+                    position: absolute;
+                    top: -4rem;
+                    left: 0;
+                    color: #ffffff;
+                    opacity: 1;
+                    font-weight: bold;
+                    white-space: nowrap;
+                }
+
                 img {
                     width: 18rem;
                     height: 12rem;
@@ -433,7 +460,7 @@ section {
                     }
                 }
 
-                .gallery-image{
+                .gallery-image {
                     border: 4px solid white;
                     border-radius: 5px;
                 }
@@ -698,12 +725,10 @@ section {
                     margin: 0;
                     padding: 0;
                 }
-
-                
             }
 
-            .map-obs{
-                margin: .4rem auto 1rem;
+            .map-obs {
+                margin: 0.4rem auto 1rem;
                 color: white;
                 font-weight: bold;
                 text-align: center;

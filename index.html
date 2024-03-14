@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="icon" href="./assets/vectors/igdsnewlogo.svg" type="image/icon type">
-    <script src="./js/app.js" async></script>
+    <script src="./js/app.js" defer></script>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         </div>
     </nav>
 
-    <nav id="main-bar">
+    <nav id="main-bar" class="hidden">
         <a class="logo-a" href="#">
             <img src="assets/vectors/igdsnewlogo.svg"
                 alt="Logo do Instituto Glacia da Silva, uma letra G e S que juntas formam a aparência de um coração." />
@@ -46,11 +46,11 @@
     <iframe src="https://www.youtube.com/embed/bU_S2EvGlwo?si=nmVe3U9TYFJ98k4S&amp;controls=0&modestbranding=1"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen seamless>
+        allowfullscreen seamless class="hidden">
     </iframe>
 
     <section id="mobile-about-us" aria-label="Sobre nós.">
-        <div class="gallery-container">
+        <div class="gallery-container hidden">
             <img src="assets/vectors/left-arrow.svg" class="prev-arrow"
                 alt="Ícone de uma flecha que representa ir para a imagem anterior." />
             <div class="gallery">
@@ -84,7 +84,7 @@
                     <p>Ao visitar um parente, o mentor do instituto, o Sr. Paulo, avistou uma cadeira de rodas quebrada
                         e inutilizada.
                         <br><br>
-                        Ali surgiu uma ideia, efetuou a compra da cadeira e realizou o seu reparo e logo após, começou a
+                        Ali surgiu uma ideia, efetuou a compra da cadeira e realizou o seu reparo e logo após começou a
                         emprestar para pessoas que precisavam. <br><br>
                         Eventualmente foi atrás de mais e mais aparatos, em usinas de reciclagem, de amigos e
                         conhecidos, etc.
@@ -120,8 +120,10 @@
     </section>
 
     <section id="desktop-about-us" aria-label="Sobre nós.">
-        <div class="gallery-container">
+        <div class="gallery-container hidden">
+
             <div class="desktop-gallery">
+                <p class="tip-hover">*Passe o mouse ou clique nas imagens*</p>
                 <img class="gallery-image dg1" src="assets/images/srglacia_e_paulo.jpg"
                     alt="Imagem antiga do fundador do instituto, o Sr. Paulo ao lado de sua mãe, a Dona Glácia." />
                 <img class="gallery-image dg2" src="assets/images/paulo_e_rose.jpg"
@@ -156,7 +158,7 @@
                     <p>Ao visitar um parente, o mentor do instituto, o Sr. Paulo, avistou uma cadeira de rodas quebrada
                         e inutilizada.
                         <br><br>
-                        Ali surgiu uma ideia, efetuou a compra da cadeira e realizou o seu reparo e logo após, começou a
+                        Ali surgiu uma ideia, efetuou a compra da cadeira e realizou o seu reparo e logo após começou a
                         emprestar para pessoas que precisavam. <br><br>
                         Eventualmente foi atrás de mais e mais aparatos, em usinas de reciclagem, de amigos e
                         conhecidos, etc.
@@ -189,7 +191,7 @@
     </section>
 
     <section id="activities" aria-label="Atividades.">
-        <div class="activities-first">
+        <div class="activities-first hidden">
             <p>O objetivo principal da instituição
                 é a captação e empréstimo de
                 aparelhato hospitalar para
@@ -207,7 +209,7 @@
                 alt="Fotografia de uma caçamba com vários aparelhos hospitalares em cima." />
         </div>
 
-        <div class="activities-second">
+        <div class="activities-second hidden">
             <p>O Instituto se mantém com
                 doações e com o bazar que
                 realiza diariamente.
@@ -224,14 +226,14 @@
     </section>
 
     <section id="helping" aria-label="Ajudando.">
-        <h1>VOCÊ PODE NOS AJUDAR!</h1>
-        <div>
+        <h1 class="hidden">VOCÊ PODE NOS AJUDAR!</h1>
+        <div class="hidden">
             <p>Caso possua alguma doação, seja de roupas, móveis,
                 eletrodomésticos e algum aparelhato hospitalar,
                 iremos até sua casa realizar a captação!
                 <br><br>
                 Também aceitamos doações monetárias, um dos
-                nossos meios é o rápido PIX!
+                nossos meios é o PIX!
             </p>
             <img src="./assets/images/qrcode.jpeg" alt="Imagem do QR Code do PIX do Instituto Glacia da Silva." />
         </div>
@@ -239,8 +241,8 @@
 
     <section id="contact" aria-label="Contato.">
         <div class="contact-socials">
-            <h1>Entre em contato conosco!</h1>
-            <div class="info-group">
+            <h1 class="hidden">Entre em contato conosco!</h1>
+            <div class="info-group hidden">
                 <div class="svg-and-contact">
                     <img src="assets/vectors/phone.svg" alt="Desenho uma representação de um telefone." />
                     <p><span>(41) 98455-2333 /&nbsp</span><span>(41) 98523-4110</span></p>
@@ -255,14 +257,14 @@
                     <p>Rua Santo Antônio, 580 - São Roque, Campo Magro PR</p>
                 </div>
             </div>
-            <div class="map-iframe">
+            <div class="map-iframe hidden">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.222487927456!2d-49.419483825252044!3d-25.36385883027683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dd21c7cdb2b21d%3A0x8267ad1c7c17b7a7!2sRua%3ASanto%20Ant%C3%B4nio%2C%20235%20-%20S%C3%A3o%20Roque%2C%20Campo%20Magro%20-%20PR%2C%2083535-000!5e0!3m2!1spt-BR!2sbr!4v1710288448457!5m2!1spt-BR!2sbr"
                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <p class="map-obs">*A nossa localização no Google Maps não está precisa*</p>
-            <div class="socials-icons">
+            </div>
+            <p class="map-obs">*A nossa localização no Google Maps não está precisa*</p>
+            <div class="socials-icons hidden">
                 <a href="https://www.facebook.com/institutoglaciadasilva" target="_blank"><img
                         src="assets/vectors/facebook.svg" alt="Logo da rede social facebook." /></a>
                 <a href="https://www.instagram.com/institutoglaciadasilva/" target="_blank"><img
@@ -271,24 +273,25 @@
         </div>
         <div class="contact-form">
             <form action='https://formspree.io/f/xwkwdlqd' method='POST'>
-                <label for="nome">Nome
+                <label for="nome" class="hidden">Nome
                     <input id="nome" name="nome" type="text" required />
                 </label>
 
-                <label for="email">E-mail
+                <label for="email" class="hidden">E-mail
                     <input id="email" name="email" type="email" required />
                 </label>
 
-                <label for="message">Mensagem
+                <label for="message" class="hidden">Mensagem
                     <textarea id="message" name="message" type="text" required></textarea>
                 </label>
 
-                <button aria-label="Enviar formulário.">ENVIAR</button>
+                <button class="hidden" aria-label="Enviar formulário.">ENVIAR</button>
             </form>
         </div>
     </section>
 
-    <footer>Website cedido por <a href="https://github.com/jaen3dev" target="_blank">jaen3dev</a></footer>
+    <footer class="hidden">Website cedido por <a href="https://github.com/jaen3dev" target="_blank">jaen3dev</a>
+    </footer>
 </body>
 
 </html>

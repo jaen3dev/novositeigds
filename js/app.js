@@ -1,12 +1,20 @@
-//VARs & Functions Gallery Mobile
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show')
+        }
+    })
+
+})
+const hiddenElements = document.querySelectorAll('.hidden')
+hiddenElements.forEach((el)=> observer.observe(el))
+
 
 const prevBtn = document.querySelector('.prev-arrow')
 const nextBtn = document.querySelector('.next-arrow')
 const galleryImgGroup = document.querySelector('.gallery')
 const galleryCard = document.querySelectorAll('.gallery-card')
-
 let galleryIndex = 0
-
 const blurNotSelectedImages = (index) => {
     for (let image of galleryCard) {
         if (image !== galleryCard[index]) {
@@ -40,12 +48,7 @@ nextBtn.addEventListener('click', () => {
     galleryIndex = galleryIndex == 2 ? 0 : galleryIndex + 1
     blurNotSelectedImages(galleryIndex)
 })
-
-
-//VARs & Functions Gallery Desktop
-
 const galleryImages = document.querySelectorAll('.gallery-image')
-
 for (let image of galleryImages) {
     image.addEventListener('mouseover', (event) => {
         for (let image of galleryImages) {
@@ -84,28 +87,22 @@ for (let image of galleryImages) {
     })
 }
 
-
-//VARS & Functions for SideBar
-
 const hamIcon = document.querySelector('.ham-menu')
 const closeIcon = document.querySelector('.close-icon')
 const sidebar = document.getElementById('sidebar')
 const sidebarAnchors = document.querySelectorAll('.sidebar-a')
-
 hamIcon.addEventListener('click', () => {
     sidebar.style.display = 'flex'
     document.querySelector('html').style.overflowY = 'hidden'
 })
-
 closeIcon.addEventListener('click', () => {
     sidebar.style.display = 'none'
     document.querySelector('html').style.overflowY = 'scroll'
 })
-
-
 for (let anchor of sidebarAnchors) {
     anchor.addEventListener('click', () => {
         sidebar.style.display = 'none'
-        document.querySelector('body').style.overflow = 'scroll'
+        document.querySelector('html').style.overflow = 'scroll'
     })
 }
+
