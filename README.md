@@ -18,4 +18,8 @@ Usei esse projeto também para me familiarizar um pouco mais com GIT.
 <h2 id="conclusao">Conclusão</h2>
 Esse projeto foi simples, meu maior desafio nele foi a parte de UI/UX e em como preparar o código usando a idéia de "MOBILE FIRST". O site é completamente responsivo e com acessibilidade. Busquei focar na facilidade de acesso por ter agora conhecimento do público alvo do website.
 
-Na data atual (14/03/2024), o website se encontra online no endereço https://www.institutoglaciadasilva.online/. 
+<h2 id="observacoes">Observações</h2>
+
+**- Na data (14/03/2024), o website se encontra online no endereço: https://www.institutoglaciadasilva.online/ ;**
+
+**- A partir (01/01/2025), a manutenção do website começou a ser realizada pelo Grupo Realiza Marketing Digital, sua funcionalidade e design não tem relação a minha pessoa.** 
