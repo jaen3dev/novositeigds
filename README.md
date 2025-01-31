@@ -22,4 +22,4 @@ Esse projeto foi simples, meu maior desafio nele foi a parte de UI/UX e em como 
 
 **- Na data (14/03/2024), o website se encontra online no endereço: https://www.institutoglaciadasilva.online/ ;**
 
-**- A partir (01/01/2025), a manutenção do website começou a ser realizada pelo Grupo Realiza Marketing Digital, sua funcionalidade e design não tem relação a minha pessoa.** 
+**- A partir (01/01/2025), a manutenção do website começou a ser realizada pelo Grupo Realiza Marketing Digital, além do uso de uma URL diferente, sua funcionalidade e design não tem relação a minha pessoa.** 
